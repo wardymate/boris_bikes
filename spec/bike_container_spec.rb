@@ -32,7 +32,7 @@ describe BikeContainer do
 	it "should know when it's full" do
 		expect(holder).not_to be_full
 		fill_holder(holder)
-  		expect(holder).to be_full
+  	expect(holder).to be_full
 	end
 
 	it 'should not accept a bike if it\'s full' do
