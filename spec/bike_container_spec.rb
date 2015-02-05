@@ -16,10 +16,6 @@ describe BikeContainer do
 		holder.dock(bike)
 	end	
 
-	def class_test(bike)
-
-	end	
-
 	it 'should accept a bike' do 
 		expect(holder.bike_count).to eq(0)
 		dock_bike(bike)
@@ -72,6 +68,8 @@ describe BikeContainer do
 	it 'should know how many broken bikes it is holding' do
 		holder.bike_count.times{holder.release(bike)}
 		expect(holder.broken_bike_number).to eq(0)
+		dock_bike(broken_bike)
+		expect(holder.broken_bike_number).to eq(1)
 	end	
 
 

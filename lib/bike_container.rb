@@ -28,11 +28,13 @@ module BikeContainer
 		bikes.count
 	end
 
-
-
 	def dock(bike)
 		raise 'Station is full' if full?
-		bikes<<bike
+		if bike.broken?
+			broken_bikes << bike
+		else
+			bikes<<bike
+		end
 	end
 
 	def release(bike)
