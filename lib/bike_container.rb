@@ -25,7 +25,7 @@ module BikeContainer
 	end	
 
 	def bike_count
-		bikes.count
+		bikes.count + broken_bikes.count
 	end
 
 	def dock(bike)

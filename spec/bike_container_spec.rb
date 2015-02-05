@@ -72,6 +72,13 @@ describe BikeContainer do
 		expect(holder.broken_bike_number).to eq(1)
 	end	
 
+	it 'should know how many broken bikes and working bikes it is holding' do
+		holder.bike_count.times{holder.release(bike)}
+		dock_bike(broken_bike)
+		dock_bike(bike)
+		expect(holder.bike_count).to eq(2)
+	end
+
 
 end
 
