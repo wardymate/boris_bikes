@@ -15,5 +15,10 @@ describe Van do
  it 'should be able to travel to a location' do
  	expect(van.travel_to(garage)).to eq(garage)
  end
+
+ it 'should be able to request broken bikes from a docking station' do
+ 	
+
+
 	
 end

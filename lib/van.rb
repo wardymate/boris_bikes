@@ -7,5 +7,7 @@ class Van
 	def travel_to(destination)
 		destination
 	end
+
+	
 		
 end

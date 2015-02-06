@@ -20,12 +20,12 @@ module BikeContainer
 		@broken_bikes ||= []
 	end	
 
-	def broken_bikes_count
-		broken_bikes.count
-	end	
+	# def broken_bikes_count
+	# 	broken_bikes.count
+	# end	
 
 	def bike_count
-		bikes.count + broken_bikes.count
+		bikes.count #+ broken_bikes.count
 	end
 
 	def dock(bike)
@@ -54,15 +54,15 @@ module BikeContainer
 	end
 
 	def available_bikes
-		bikes#.reject {|bike| bike.broken?}
+		bikes.reject {|bike| bike.broken?}
 	end
 
 	def empty?
 		bike_count == 0
 	end	
 
-	def broken_bike_number
-		broken_bikes_count
-	end	
+	# def broken_bike_number
+	# 	broken_bikes_count
+	# end	
 
 end	
